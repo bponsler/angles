@@ -1,4 +1,7 @@
-if (CATKIN_ENABLE_TESTING)
-  catkin_add_gtest(utest utest.cpp)
-  catkin_add_nosetests(utest.py)
-endif (CATKIN_ENABLE_TESTING)
+if (BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+	
+  ament_add_gtest(${PROJECT_NAME}_utest utest.cpp)
+  ament_add_nose_test(${PROJECT_NAME}_nose_test utest.py)
+endif(BUILD__TESTING)
