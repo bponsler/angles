@@ -4,4 +4,4 @@ if (BUILD_TESTING)
 	
   ament_add_gtest(${PROJECT_NAME}_utest utest.cpp)
   ament_add_nose_test(${PROJECT_NAME}_nose_test utest.py)
-endif(BUILD__TESTING)
+endif(BUILD_TESTING)
